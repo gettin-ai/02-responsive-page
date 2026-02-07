@@ -15,6 +15,18 @@ header {
   font-family: 'Exo 2', sans-serif;
 }
 
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.header-inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 h1, h2, h3 {
   font-family: 'Exo 2', sans-serif;
 }
@@ -26,6 +38,8 @@ h1 {
 
 main {
   padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 section {
@@ -122,4 +136,102 @@ a:hover {
 .article img {
   margin-bottom: 20px;
   border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #featured-article h2 {
+    font-size: 32px;
+}
+
+.site-title,
+.site-nav {
+  float: none;
+  display: block;
+}
+
+.main-nav li {
+  display: block;
+  margin: 6px 0;
+}
+
+h3 {
+    font-size: 18px;
+  }
+
+  #featured-article h2 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 12px;
+  }
+
+  section {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+    body {
+      font-size: 16px;
+    }
+  }
+
+header {
+  text-align: center;
+}
+
+.main-nav {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.site-title {
+  float: left;
+  margin: 0;
+}
+
+.site-nav {
+  float: right;
+  margin: 0;
+}
+
+/* Add this at the very end so it overrides later floats */
+@media (max-width: 768px) {
+  .site-title,
+  .site-nav {
+    float: none;
+    display: block;
+  }
+
+  .main-nav li {
+    display: block;
+    margin: 6px 0;
+  }
 }
